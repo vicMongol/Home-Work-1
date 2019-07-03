@@ -41,40 +41,26 @@
 // var simplyMass = ["ключи", "значение", "литерал", "функции", "конкотинация"];
 // var reversMass = [];
 // var x = simplyMass.pop();
-// // reversMass.unshift(x);
+// reversMass.unshift(x);
 // for ( i = 0; i < 5; i++ ) {
-//     //  var x = simplyMass.pop();
-//      reversMass.unshift(x);
+//     var x = simplyMass.pop();
+//     reversMass.unshift(x);
 //} 
 
+var reversMass = [")", "Lol", "emanresu", "olleH"];
+    reversMass.splice(0, 4, "Hello username )");
+    console.log(reversMass.join(" "));
 
-// studens.sortfunction(user1, user2) {
-//     if (user1.name > user2.name) {
-//         return 1;
-//     } else if (user1.name == user2.name) {
-//     if (us1.name > us2.name) {
-//         return -1;
-//       } else 
+var reversMassTry2 = [")", "Lol", "emanresu", "olleH"];
+    reversMassTry2.splice(-3, 3, "Hello username");
+    reversMassTry2.reverse();
+    console.log(reversMassTry2.join(" "));
 
-//     }
-// }
-
-// var xxx = [")", "Lol", "emanresu", "olleH"];
-//     xxx.splice(0, 4, "Hello username )");
-//     console.log(xxx.join(" "));
-
-// var xxx = [")", "Lol", "emanresu", "olleH"];
-//     xxx.splice(-3, 3, "Hello username");
-//     xxx.reverse();
-//     console.log(xxx.join(" "));
-
-// var xxx = [")", "Lol", "emanresu", "olleH"];
-// xxx.splice(1, 1);
-// var qqq = xxx[2].split('').reverse().join("");
-// var aaa = xxx[1].split('').reverse().join("");
-// console.log(qqq + " " + aaa + xxx[0]);
-
-
+var reversMassTry3 = [")", "Lol", "emanresu", "olleH"];
+reversMassTry3.splice(1, 1);
+var indexHello = reversMassTry3[2].split('').reverse().join("");
+var indexUsName = reversMassTry3[1].split('').reverse().join("");
+console.log(indexHello + " " + indexUsName + " " + reversMassTry3[0]);
 
 var tabelStudens = [
     {name: "Tetiana", mark: 4.8, diploma: true},
@@ -86,16 +72,47 @@ var tabelStudens = [
     {name: "Anatoly", mark: 4.9, diploma: true},
 ];
 
+function compareStudens(user1, user2) {
+    if (user1.mark > user2.mark) {
+        return -1;
+    } else if (user1.mark == user2.mark) {
+        if (user1.diploma > user2.diploma) {
+            return -1;
+        } else if (user1.diploma == user2.diploma) {
+            if (user1.name > user2.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        } else {
+            return 1;
+        }
+    } else {
+        return 1;
+    }
+}
+tabelStudens.sort(compareStudens);
+tabelStudens.length = 5;
+console.log(tabelStudens);
 
+var massData = ["el-1", "el-2", "el-3", "el-8", "el-5"];
 
+function changeMass(a) {
+    var newMass = massData[a].split('');
+    newMass.splice(-2,1, ":");
+    var someString = newMass.join("");
+   return (someString + " " + (a + 1) + ", ");
+}
+console.log( changeMass(0) + changeMass(1) +  changeMass(2) +  changeMass(3) +  changeMass(4) );
 
+var massData1 = ["el-1", "el-2", "el-3", "el-8", "el-5"];
 
-
-
-
-
-
-
+function changeMass1(a) {
+    var newMass1 = massData1[a].split('');
+    newMass1.splice(-2,1, ":");
+    return newMass1.join("");
+}
+console.log(changeMass1(0) + " (1), " + changeMass1(1) + " (2), " + changeMass1(2) + " (3), " + changeMass1(3) + " (4), " + changeMass1(4) + " (5)");
 
 
 
