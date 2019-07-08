@@ -21,31 +21,31 @@
 // console.log (false);
 // }
 
-// //  короткая запись 
-// i = (someNumber > 0) ? true : false;
-// console.log(i);
-// i = (someNumber < 0) ? true : false;
-// console.log(i);
-// i = (+someNumber === 0) ? true : false;
-// console.log(i);
+// // //  короткая запись 
+// // i = (someNumber > 0) ? true : false;
+// // console.log(i);
+// // i = (someNumber < 0) ? true : false;
+// // console.log(i);
+// // i = (+someNumber === 0) ? true : false;
+// // console.log(i);
 
-// // Я не знал, что в консоль выводить булю или число, по этому...
+// // // Я не знал, что в консоль выводить булю или число, по этому...
 
-// i = (someNumber > 0) ? someNumber : false;
-// console.log(i);
-// i = (someNumber < 0) ? someNumber : false;
-// console.log(i);
-// i = (+someNumber === 0) ? true : false;
-// console.log(i);
+// // i = (someNumber > 0) ? someNumber : false;
+// // console.log(i);
+// // i = (someNumber < 0) ? someNumber : false;
+// // console.log(i);
+// // i = (+someNumber === 0) ? true : false;
+// // console.log(i);
 
-// var simplyMass = ["ключи", "значение", "литерал", "функции", "конкотинация"];
-// var reversMass = [];
-// var x = simplyMass.pop();
-// reversMass.unshift(x);
-// for ( i = 0; i < 5; i++ ) {
-//     var x = simplyMass.pop();
-//     reversMass.unshift(x);
-//} 
+// // var simplyMass = ["ключи", "значение", "литерал", "функции", "конкотинация"];
+// // var reversMass = [];
+// // var x = simplyMass.pop();
+// // reversMass.unshift(x);
+// // for ( i = 0; i < 5; i++ ) {
+// //     var x = simplyMass.pop();
+// //     reversMass.unshift(x);
+// //} 
 
 var reversMass = [")", "Lol", "emanresu", "olleH"];
     reversMass.splice(0, 4, "Hello username )");
@@ -101,21 +101,6 @@ function changeMass(a) {
     var newMass = massData[a].split('');
     newMass.splice(-2,1, ":");
     var someString = newMass.join("");
-   return (someString + " " + (a + 1) + ", ");
+   return (someString + " " + "(" + (a + 1) + ")" + ", ");
 }
 console.log( changeMass(0) + changeMass(1) +  changeMass(2) +  changeMass(3) +  changeMass(4) );
-
-var massData1 = ["el-1", "el-2", "el-3", "el-8", "el-5"];
-
-function changeMass1(a) {
-    var newMass1 = massData1[a].split('');
-    newMass1.splice(-2,1, ":");
-    return newMass1.join("");
-}
-console.log(changeMass1(0) + " (1), " + changeMass1(1) + " (2), " + changeMass1(2) + " (3), " + changeMass1(3) + " (4), " + changeMass1(4) + " (5)");
-
-
-
-
-
-
